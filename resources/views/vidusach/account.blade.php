@@ -27,6 +27,7 @@
         <input type ='hidden' value='{{$user->id}}' name='id'>
         <label>Ảnh đại diện</label><br>
         <input type="file" name="photo" id="photo" accept="image/*" class="form-control-file">
+        <img src="{{asset('storage/profile/'.$user->photo) }}" width="50px" class='mb-1'/>
         {{ csrf_field() }}
         <div style='text-align:center;'><input type='submit' class='btn btn-primary mt-1' value='Lưu'></div>
     </form>

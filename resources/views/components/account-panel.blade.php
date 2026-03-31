@@ -16,8 +16,6 @@
   <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap4.js"></script>
   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap4.css">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   
-  <!-- Scripts -->
 
   <style>
     .sidebar {
@@ -73,12 +71,12 @@
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="{{route('account')}}">
+              <a class="nav-link active" href="#">
                 Thông tin tài khoản
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('booklist')}}">
+              <a class="nav-link" href="#">
                 Quản lý sách
               </a>
             </li>
@@ -93,7 +91,8 @@
     </div>
   </div>
 
-
- 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
