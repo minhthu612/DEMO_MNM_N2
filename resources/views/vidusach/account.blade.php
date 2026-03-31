@@ -23,7 +23,7 @@
         <label>Email</label>
         <input type='text' class='form-control form-control-sm' name='email' value="{{$user->email}}">
         <label>Số điện thoại</label>
-        <input type='text' class='form-control form-control-sm' name='phone' value="{{$user->phone}}">
+        <input type='text' class='form-control form-control-sm' name='phone' value="{{ $user->phone ?? '' }}">
         <input type ='hidden' value='{{$user->id}}' name='id'>
         <label>Ảnh đại diện</label><br>
         <input type="file" name="photo" id="photo" accept="image/*" class="form-control-file">
