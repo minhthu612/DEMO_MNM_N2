@@ -7,11 +7,14 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
+
 class AccountController extends Controller
 {
     function accountpanel()
     {
-        $user = DB::table("users")->whereRaw("id=?", [Auth::user()->id])->first();
+        $user = DB::table("users")
+            ->whereRaw("id=?", [Auth::user()->id])
+            ->first();
         return view("vidusach.account", compact("user"));
     }
 
