@@ -69,7 +69,7 @@
                         <i class="fa fa-cart-arrow-down fa-2x mr-2 mt-2" aria-hidden="true"></i>
                         </a>
                     </div>
-                    <div class='col-1 p-0 d-flex justify-content-end'>
+                    <div class='col-3 p-0 d-flex justify-content-end'>
                         @auth
                             <div class="dropdown">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
