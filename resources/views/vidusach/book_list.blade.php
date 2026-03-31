@@ -39,6 +39,19 @@
                 </td>
             </tr>
             @endforeach
+            @if (session('status'))
+            <div class="alert alert-success">
+            {{ session('status') }}
+            </div>
+            @endif
         </tbody>
     </table>
+    <script>
+        $(document).ready(function(){
+        new DataTable('#book-table', {
+        responsive: true,
+        "bStateSave":true
+        });
+        });
+</script>
 </x-account-panel>

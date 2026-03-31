@@ -3,9 +3,12 @@
     <head>
         <title>{{$title}}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
         <style>
             /* Định dạng màu nền và màu chữ của menu */
             .navbar {
@@ -38,23 +41,35 @@
             <img src="{{asset('images/banner_sach.jpg')}}" width="1000px">
             <nav class="navbar navbar-light navbar-expand-sm">
                 <div class='container-fluid p-0'>
-                    <div class='col-9 p-0'>
+                    <div class='col-8 p-0'>
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{{url('sach')}}">Trang chủ</a>
+                                    <a class="nav-link menu-the-loai" href="{{url('sach')}}">Trang chủ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('sach/theloai/1')}}">Tiểu thuyết</a>
+                                    <a class="nav-link menu-the-loai" href="{{url('sach/theloai/1')}}">Tiểu thuyết</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('sach/theloai/2')}}">Truyện ngắn - tản văn</a>
+                                    <a class="nav-link menu-the-loai" href="{{url('sach/theloai/2')}}">Truyện ngắn - tản văn</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('sach/theloai/3')}}">Tác phẩm kinh điển</a>
+                                    <a class="nav-link menu-the-loai" href="{{url('sach/theloai/3')}}">Tác phẩm kinh điển</a>
                                 </li>
                             </ul>
                     </div>
-                    <div class='col-3 p-0 d-flex justify-content-end'>
+                    <div style='color:white;position:relative' class='mr-2'>
+                        <div style='width:20px; height:20px;background-color:#23b85c; font-size:12px; border:none;border-radius:50%; position:absolute;right:2px;top:-2px' id='cart-number-product'>
+                        @if (session('cart'))
+                        {{ count(session('cart')) }}
+                        @else
+                        0
+                        @endif
+                        </div>
+                        <a href="{{route('order')}}" style='cursor:pointer;color:white;'>
+                        <i class="fa fa-cart-arrow-down fa-2x mr-2 mt-2" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class='col-1 p-0 d-flex justify-content-end'>
                         @auth
                             <div class="dropdown">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
