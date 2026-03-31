@@ -16,6 +16,8 @@
     </div>
 @endif
 
+
+
 <x-account-panel>
     <form method = 'post' action="{{route('saveinfo')}}" enctype="multipart/form-data"
         style='width:30%; margin:0 auto'>
