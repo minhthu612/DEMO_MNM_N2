@@ -1,13 +1,13 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ViduLayoutController;
 use Illuminate\Support\Facades\Route;
 
 /* Route::get('/', function () {
     return view('welcome');
 });
 */
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -83,8 +83,6 @@ Route::get('sach/chitiet/{id}','App\Http\Controllers\ViduLayoutController@chitie
 
 /*TH3*/
 Route::get('/','App\Http\Controllers\ViduLayoutController@sach');
-
-
 Route::get('/accountpanel','App\Http\Controllers\AccountController@accountpanel')->middleware('auth')->name("account");
 Route::post('/saveaccountinfo','App\Http\Controllers\AccountController@saveaccountinfo')->middleware('auth')->name('saveinfo');
 
@@ -94,4 +92,5 @@ Route::post('/cart/add','App\Http\Controllers\BookController@cartadd')->name('ca
 Route::post('/cart/delete','App\Http\Controllers\BookController@cartdelete')->name('cartdelete');
 Route::post('/order/create','App\Http\Controllers\BookController@ordercreate')->middleware('auth')->name('ordercreate');
 Route::post('/bookview','App\Http\Controllers\BookController@bookview')->name("bookview");
+
 
